@@ -20,6 +20,7 @@ mongoose.connect(process.env.MONGO_DB)
     console.log('Database connected');
   })
   .catch((error)=> {
+    console.log(error);
     console.log('Error connecting to database');
   });
 // set up port
