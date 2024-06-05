@@ -70,7 +70,7 @@ export function getUserById(req, res){
 export function updateUser(req, res) {
   const userId = req.params.userId;
   const updateObject = req.body;
-  User.update({ _id: userId }, { $set:updateObject })
+  User.updateOne({ _id: userId }, { $set:updateObject })
     .exec()
     .then(() => {
       res.status(200).json({
@@ -94,8 +94,10 @@ export function deleteUser(req, res) {
     .exec()
     .then(()=> res.status(204).json({
       success: true,
+      message: 'Deleted success'
     }))
     .catch((err) => res.status(500).json({
       success: false,
+      message: 'Something went wrong'
     }));
 }
