@@ -9,11 +9,10 @@ Open [http://localhost:5035](http://localhost:3000) to view api
 
 you can check this api on postman or everywhere
 
-ModelUser: {
+ModelUser: 
+{
 	name: string `<required>,`
-
-    email: string`<required>,`
-
+	email: string`<required>,`
 }
 
 **Create a user: POST**
